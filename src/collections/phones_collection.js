@@ -1,3 +1,8 @@
+
+var Backbone = require('backbone');
+var Phone = require('../models/phone.js');
+
+
 PhonesCollection = Backbone.Collection.extend({
     model: Phone,
 
@@ -10,3 +15,6 @@ PhonesCollection = Backbone.Collection.extend({
         });
     }
 });
+
+module.exports = PhonesCollection;
+

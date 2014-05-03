@@ -1,3 +1,6 @@
+
+var Backbone = require('backbone');
+
 PhonesFilterView = Backbone.View.extend({
    
     events: {
@@ -28,3 +31,6 @@ PhonesFilterView = Backbone.View.extend({
         this.model.set('sortBy', event.target.value);
     }
 });
+
+module.exports = PhonesFilterView;
+

@@ -1,1 +1,0 @@
-Photo = Backbone.Model;

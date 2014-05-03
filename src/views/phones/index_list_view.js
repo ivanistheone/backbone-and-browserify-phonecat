@@ -1,3 +1,10 @@
+
+var Backbone = require('backbone');
+
+var PhonesCollection = require('../../collections/phones_collection.js');
+var PhonesIndexListPhoneView = require('./index_list_phone_view.js');
+
+
 PhonesIndexListView = Backbone.View.extend({
 
     initialize: function () {
@@ -39,3 +46,6 @@ PhonesIndexListView = Backbone.View.extend({
         this.render();
     }
 });
+
+module.exports = PhonesIndexListView;
+

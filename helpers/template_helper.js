@@ -6,12 +6,13 @@ var ejs = require('ejs');
 
 exports.createJstSync = function (dir) {
     var templates = [];
-    var file = 'public/javascripts/jst.js';
+    var file = 'src/jst.js';
     if (fs.existsSync(dir)) {
         templates = _.reject(wrench.readdirSyncRecursive(dir), function (result) { return path.extname(result) !== '.jst'; });
     }
 
-    fs.writeFileSync(file, 'window.JST = {};\n');
+    fs.writeFileSync(file, 'PhonesHelper = require(\'./helpers/phones_helper.js\');\n');
+    fs.appendFileSync(file, 'window.JST = {};\n');
     _.each(templates, function (template) {
         var processed_file = ejs.render(fs.readFileSync(dir + '/' + template).toString());
         _.templateSettings = {

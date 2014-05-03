@@ -1,4 +1,13 @@
-PhonesIndexView = Backbone.View.extend({
+
+var Backbone = require('backbone');
+
+var Filter = require('../../models/filter.js');
+var PhonesCollection = require('../../collections/phones_collection.js');
+var PhonesFilterView = require('./filter_view.js');
+var PhonesIndexListView = require('./index_list_view.js');
+
+
+var PhonesIndexView = Backbone.View.extend({
 
     initialize: function () {
         this.filter = new Filter();
@@ -25,3 +34,6 @@ PhonesIndexView = Backbone.View.extend({
         this.$el.html(JST['phones/index']());
     }
 });
+
+module.exports =  PhonesIndexView;
+

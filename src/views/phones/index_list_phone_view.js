@@ -1,3 +1,8 @@
+
+
+var Backbone = require('backbone');
+
+
 PhonesIndexListPhoneView = Backbone.View.extend({
 
     events: {
@@ -18,3 +23,6 @@ PhonesIndexListPhoneView = Backbone.View.extend({
         App.navigate(event.currentTarget.pathname, { trigger: true });
     }
 });
+
+module.exports = PhonesIndexListPhoneView;
+

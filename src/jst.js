@@ -1,3 +1,4 @@
+PhonesHelper = require('./helpers/phones_helper.js');
 window.JST = {};
 window.JST["phones/filter"] = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
@@ -72,7 +73,7 @@ return __p;
 window.JST["phones/show_specs"] = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
-__p+='<li>\n    <span>Availability and Networks</span>\n    <dl>\n        <dt>Availability</dt>\n        <dd>'+
+__p+='\n<li>\n    <span>Availability and Networks</span>\n    <dl>\n        <dt>Availability</dt>\n        <dd>'+
 ((__t=( get('availability') ))==null?'':_.escape(__t))+
 '</dd>\n    </dl>\n</li>\n\n<li>\n    <span>Battery</span>\n    <dl>\n        <dt>Type</dt>\n        <dd>'+
 ((__t=( get('battery').type ))==null?'':_.escape(__t))+

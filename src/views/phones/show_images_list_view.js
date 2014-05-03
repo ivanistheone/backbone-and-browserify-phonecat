@@ -1,4 +1,9 @@
-PhonesShowImagesListView = Backbone.View.extend({
+
+var Backbone = require('backbone');
+var PhonesShowImagesListImageView = require('./show_images_list_image_view.js');
+
+
+var PhonesShowImagesListView = Backbone.View.extend({
 
     initialize: function () {
         this.render();
@@ -16,3 +21,6 @@ PhonesShowImagesListView = Backbone.View.extend({
         }).el);
     }
 });
+
+module.exports = PhonesShowImagesListView;
+

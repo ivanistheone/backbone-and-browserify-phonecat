@@ -1,10 +1,16 @@
-# AngularJS Phone Catalog Tutorial Application Coded in Backbone
+# AngularJS Phone Catalog Tutorial coded in Backbone and compiled using Browserify by Gulp
+
 
 ## Overview
 
-This tutorial builds a web application using Backbone.js. This tutorial is based on the [AngularJS PhoneCat Tutorial App](http://docs.angularjs.org/tutorial) and mirrors the functionality of each of the first 10 steps.
+This tutorial builds a web application using ''Backbone.js'' 
+based on the [AngularJS PhoneCat Tutorial App](http://docs.angularjs.org/tutorial)
+and mirrors the functionality of each of the first 10 steps.
+The full tutorial can be found on [Aaron O'Connell's blog](http://204nocontent.me/i-coded-the-angular-tutorial-app-in-backbone-and-it-took-260-more-code).
 
-The full tutorial can be found on [my blog](http://204nocontent.me/i-coded-the-angular-tutorial-app-in-backbone-and-it-took-260-more-code).
+[Ivan Savov](http://minireference.com/) modularized the code into ''CommonJS'' modules,
+and provided a working ''gulpfile.js'' to build js + prerequisites using ''browserify''.
+
 
 ## Prerequisites
 
@@ -20,62 +26,19 @@ The full tutorial can be found on [my blog](http://204nocontent.me/i-coded-the-a
 ## Workings of the application
 
 - A basic Node app serves static files and JSON.
-- All Backbone app files are located in /public/javascripts.
-- /public/javascripts/lib contains Backbone.js and its dependencies.  
-- /public/javascripts/jst.js is a templating dictionary automatically created by Node (you can just ignore it).
-
-## Commits / Tutorial Outline
-
-You can check out any point of the tutorial using
-    git checkout step-?
-
-To see the changes between any two lessons use the git diff command
-    git diff step-?..step-?
-
-### step-0
-
-Basic structure for a new Backbone app.
-
-### step-1
-
-Render a static phone list using a Backbone template.
-
-### step-2
-
-Create Backbone models and collection to represent a list of phones.
-
-### step-3
-
-Add interactive text search to phones.
-
-### step-4
-
-Add the ability to order phones.
-
-### step-5
-
-Fetch phones data using a JSON API.
-
-### step-6
-
-Fill out the phones template with images and links.
-
-### step-7
-
-Route the phone details view.
-
-### step-8
-
-Fill out the phone details view.
-
-### step-9
-
-Add a custom view helper to create checkmarks.
-
-### step-10
-
-Replace the phone's main image when a user clicks on a tumbnail.
+- All Backbone app files are located in ''src/''
+- ''src/jst.js'' is a templating dictionary created by ''mktemplates'' task in gulp
+- The entire js code (including jQuery, Backbone and _) is combined into ''public/bundle.js''
 
 
+## Tutorial Outline
+
+To follow the tutorial step by step (very educational),
+check out the Original author's [blog post](http://204nocontent.me/i-coded-the-angular-tutorial-app-in-backbone-and-it-took-260-more-code).
 
 
+# Useful links for gulp and browseify dev
+
+- http://browserify.org/
+- http://viget.com/extend/gulp-browserify-starter-faq
+- http://rkulla.blogspot.com/2014/04/using-browserify-with-jquery-backbonejs.html

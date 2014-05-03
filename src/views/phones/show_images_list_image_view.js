@@ -1,3 +1,6 @@
+
+var Backbone = require('backbone');
+
 PhonesShowImagesListImageView = Backbone.View.extend({
     events: {
         'click': 'selectImage'
@@ -15,3 +18,6 @@ PhonesShowImagesListImageView = Backbone.View.extend({
         this.model.trigger('imageSelected', this.model);
     }
 });
+
+module.exports = PhonesShowImagesListImageView;
+

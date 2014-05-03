@@ -1,3 +1,9 @@
+
+var Backbone = require('backbone');
+
+var PhotosCollection = require('../collections/photos_collection.js');
+
+
 Phone = Backbone.Model.extend({
     urlRoot: '/api/phones',
 
@@ -9,3 +15,5 @@ Phone = Backbone.Model.extend({
         return res;
     }
 });
+
+module.exports = Phone;

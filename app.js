@@ -9,12 +9,15 @@ app.set('port', 8888);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+/* nice trick (just in time templates?) but I moved this task to the gulpfile 
 if ('development' === app.get('env')) {
     app.use(function (req, res, next) {
-        if (req.path === '/javascripts/jst.js') templateHelper.createJstSync('public/javascripts/templates');
+        if (req.path === '/javascripts/jst.js') templateHelper.createJstSync('src/templates');
         next();
     });
 }
+*/
+
 
 // cache images so this example app simulates a production environment
 app.use(function (req, res, next) {

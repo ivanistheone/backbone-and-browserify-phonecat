@@ -1,4 +1,12 @@
-PhonesShowView = Backbone.View.extend({
+
+var Backbone = require('backbone');
+
+var PhonesShowImageView = require('./show_image_view.js');
+var PhonesShowImagesListView = require('./show_images_list_view.js');
+var PhonesShowSpecsView = require('./show_specs_view.js');
+
+
+var PhonesShowView = Backbone.View.extend({
 
     initialize: function () {
         this.model.fetch();
@@ -25,3 +33,6 @@ PhonesShowView = Backbone.View.extend({
         });
     }
 });
+
+module.exports = PhonesShowView;
+

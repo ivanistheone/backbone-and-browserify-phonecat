@@ -1,3 +1,7 @@
+
+var Backbone = require('backbone');
+
+
 PhonesShowImageView = Backbone.View.extend({
 
     initialize: function () {
@@ -15,3 +19,6 @@ PhonesShowImageView = Backbone.View.extend({
         this.model.set('mainImage', photo);
     }
 });
+
+module.exports = PhonesShowImageView;
+

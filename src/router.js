@@ -1,7 +1,13 @@
-Router = Backbone.Router.extend({
+var Backbone = require('backbone');
+var PhonesIndexView = require('./views/phones/index_view.js');
+var PhonesShowView = require('./views/phones/show_view.js');
+var Phone = require('./models/phone.js');
+
+
+var Router = Backbone.Router.extend({
     
     routes: {
-        '': 'phonesIndex',
+        '':           'phonesIndex',
         'phones/:id': 'phonesShow'
     },
 
@@ -15,4 +21,9 @@ Router = Backbone.Router.extend({
             model: new Phone({ id: id })
         });
     }
+
 });
+
+
+module.exports = Router;
+
