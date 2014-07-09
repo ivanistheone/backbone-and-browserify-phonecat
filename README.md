@@ -11,6 +11,10 @@ The full tutorial can be found on [Aaron O'Connell's blog](http://204nocontent.m
 [Ivan Savov](http://minireference.com/) modularized the code into ''CommonJS'' modules,
 and provided a working ''gulpfile.js'' to build js + prerequisites using ''browserify''.
 
+TODO: update gulpfile to latest best practices
+
+TODO: simplify code a bit and compare LOC again
+
 
 ## Prerequisites
 
